@@ -21,7 +21,12 @@ export default function VoteChart({ data }: { data: ChartData[] }) {
           formatter={(value: any) => [`${value} Suara`, 'Perolehan']}
           labelFormatter={(label: any) => `Calon Nomor ${label}`}
         />
-        <Bar dataKey="suara" fill="#2563eb" radius={[4, 4, 0, 0]} />
+        <Bar 
+          dataKey="suara" 
+          fill="#facc15" 
+          radius={[6, 6, 0, 0]}
+          name="Perolehan Suara"
+        />
       </BarChart>
     </ResponsiveContainer>
   );

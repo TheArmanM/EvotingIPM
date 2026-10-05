@@ -109,7 +109,7 @@ export default function ManageCandidatesPage() {
           <h1 className="text-2xl font-bold text-slate-900">Kelola Calon Formatur</h1>
           <p className="text-slate-500 text-sm">Tambah, edit foto, atau hapus daftar calon.</p>
         </div>
-        <button onClick={() => setIsModalOpen(true)} className="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-blue-700 transition-colors shadow-sm">
+        <button onClick={() => setIsModalOpen(true)} className="bg-yellow-600 text-white px-5 py-2.5 rounded-lg font-bold hover:bg-yellow-700 transition-colors shadow-sm">
           + Tambah Calon
         </button>
       </div>
@@ -143,7 +143,7 @@ export default function ManageCandidatesPage() {
                         
                         {/* Overlay Tombol Ubah & Hapus */}
                         <div className="absolute inset-0 bg-black/60 hidden group-hover:flex flex-col items-center justify-center gap-1 transition-all">
-                          <label className="cursor-pointer text-white text-[10px] font-bold bg-blue-600 px-2 py-1 rounded hover:bg-blue-700 text-center w-3/4">
+                          <label className="cursor-pointer text-white text-[10px] font-bold bg-yellow-600 px-2 py-1 rounded hover:bg-yellow-700 text-center w-3/4">
                             {uploadingId === c.id ? '...' : 'Ubah'}
                             <input type="file" accept="image/jpeg, image/png, image/webp" className="hidden" onChange={(e) => handlePhotoUpload(e, c.id)} disabled={uploadingId === c.id} />
                           </label>
@@ -194,7 +194,7 @@ export default function ManageCandidatesPage() {
               </div>
               <div className="flex gap-3 pt-4">
                 <button type="button" onClick={() => setIsModalOpen(false)} className="flex-1 px-4 py-2 rounded-lg border text-slate-700 font-semibold hover:bg-slate-50">Batal</button>
-                <button type="submit" disabled={isSubmitting} className="flex-1 px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 disabled:opacity-50">
+                <button type="submit" disabled={isSubmitting} className="flex-1 px-4 py-2 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 disabled:opacity-50">
                   {isSubmitting ? 'Menyimpan...' : 'Simpan'}
                 </button>
               </div>

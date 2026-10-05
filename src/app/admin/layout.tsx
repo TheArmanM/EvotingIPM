@@ -7,7 +7,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Sidebar untuk Desktop */}
       <aside className="w-64 bg-white border-r border-slate-200 hidden md:flex flex-col fixed h-full z-20">
         <div className="p-6 border-b border-slate-200">
-          <h2 className="text-xl font-bold text-blue-700">Admin Panel</h2>
+          <h2 className="text-xl font-bold text-yellow-500">Admin Panel</h2>
           <p className="text-xs text-slate-500 mt-1">E-Vote Musyda IPM</p>
           <div className="mt-3 bg-green-100 text-green-700 text-xs inline-block px-2 py-1 rounded font-semibold border border-green-200">
             🟢 Voting Aktif
@@ -18,6 +18,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           
 <Link href="/admin/candidates" className="px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-lg font-semibold transition-colors">
   👥 Kelola Calon
+</Link>
+<Link href="/admin" className="px-4 py-3 text-slate-600 hover:bg-slate-100 rounded-lg font-semibold transition-colors">
+  👥 Suara Masuk
 </Link>
 <Link href="/admin/reset" className="px-4 py-3 text-red-500 hover:bg-red-50 rounded-lg font-bold transition-colors mt-auto">
   ⚠️ Reset Voting
@@ -31,7 +34,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
       {/* Header Mobile (Hanya tampil di HP) */}
       <div className="md:hidden fixed top-0 w-full bg-white border-b border-slate-200 p-4 flex justify-between items-center z-50 shadow-sm">
-        <h2 className="font-bold text-blue-700">Admin Panel</h2>
+        <h2 className="font-bold text-yellow-700">Admin Panel</h2>
         <div className="w-24"><LogoutButton /></div>
       </div>
 

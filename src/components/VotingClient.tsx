@@ -62,7 +62,7 @@ export default function VotingClient({
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <h1 className="font-bold text-xl text-blue-700 hidden sm:block">E-Vote Musyda IPM</h1>
+          <h1 className="font-bold text-xl text-yellow-700 hidden sm:block">E-Vote Musyda IPM</h1>
           <div className="flex items-center gap-4">
             <span className="text-sm text-slate-600 font-medium">Halo, {userName}</span>
             <button 
@@ -79,7 +79,7 @@ export default function VotingClient({
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-slate-900">PEMILIHAN CALON FORMATUR</h2>
-          <p className="text-slate-500 mt-1">Silakan pilih tepat <span className="font-bold text-blue-600">9 calon</span>.</p>
+          <p className="text-slate-500 mt-1">Silakan pilih tepat <span className="font-bold text-yellow-600">9 calon</span>.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -90,7 +90,7 @@ export default function VotingClient({
                 key={c.id} 
                 onClick={() => handleSelect(c.id)}
                 className={`cursor-pointer bg-white rounded-xl shadow-sm border-2 overflow-hidden transition-all duration-200 ${
-                  isSelected ? 'border-blue-500 ring-4 ring-blue-50' : 'border-slate-100 hover:border-slate-300'
+                  isSelected ? 'border-yellow-500 ring-4 ring-blue-50' : 'border-slate-100 hover:border-slate-300'
                 }`}
               >
                 <div className="aspect-[4/3] bg-slate-100 relative">
@@ -110,7 +110,7 @@ export default function VotingClient({
                   {c.description && <p className="text-sm text-slate-500 mt-1 line-clamp-2">{c.description}</p>}
                   
                   {isSelected && (
-                    <div className="mt-3 bg-blue-600 text-white text-sm py-1.5 rounded-md font-bold">
+                    <div className="mt-3 bg-yellow-600 text-white text-sm py-1.5 rounded-md font-bold">
                       Telah Dipilih
                     </div>
                   )}
@@ -125,12 +125,12 @@ export default function VotingClient({
       <div className="fixed bottom-0 left-0 w-full bg-white border-t border-slate-200 p-4 shadow-[0_-8px_30px_rgb(0,0,0,0.05)] z-40">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-lg">
-            Pilihan Anda: <span className={`font-bold ${selected.length === 9 ? 'text-blue-600' : 'text-slate-700'}`}>{selected.length} / 9</span>
+            Pilihan Anda: <span className={`font-bold ${selected.length === 9 ? 'text-yellow-600' : 'text-slate-700'}`}>{selected.length} / 9</span>
           </div>
           <button 
             onClick={() => setIsModalOpen(true)}
             disabled={selected.length !== 9}
-            className="w-full sm:w-auto bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed"
+            className="w-full sm:w-auto bg-yellow-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-yellow-700 transition-colors disabled:bg-slate-300 disabled:cursor-not-allowed"
           >
             SUBMIT VOTE
           </button>
@@ -156,7 +156,7 @@ export default function VotingClient({
               <button 
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="flex-1 px-4 py-2.5 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 disabled:bg-blue-400 flex justify-center items-center"
+                className="flex-1 px-4 py-2.5 rounded-lg bg-yellow-600 text-white font-semibold hover:bg-yellow-700 disabled:bg-yellow-400 flex justify-center items-center"
               >
                 {isSubmitting ? 'Mengirim...' : 'Ya, Kirim Vote'}
               </button>
