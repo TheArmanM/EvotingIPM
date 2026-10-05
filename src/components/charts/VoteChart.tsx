@@ -18,8 +18,8 @@ export default function VoteChart({ data }: { data: ChartData[] }) {
         <Tooltip 
           cursor={{ fill: '#f8fafc' }}
           contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-          formatter={(value: number) => [`${value} Suara`, 'Perolehan']}
-          labelFormatter={(label: number) => `Calon Nomor ${label}`}
+          formatter={(value: any) => [`${value} Suara`, 'Perolehan']}
+          labelFormatter={(label: any) => `Calon Nomor ${label}`}
         />
         <Bar dataKey="suara" fill="#2563eb" radius={[4, 4, 0, 0]} />
       </BarChart>
